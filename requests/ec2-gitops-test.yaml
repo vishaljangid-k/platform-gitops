@@ -1,0 +1,9 @@
+apiVersion: demo.acme.io/v1
+kind: EC2Instance
+metadata:
+  name: payments-gitops-1
+  namespace: default
+spec:
+  team: payments
+  size: small
+  requestId: gitops-test-1
