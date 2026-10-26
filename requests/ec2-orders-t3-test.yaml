@@ -11,8 +11,8 @@
   "spec": {
     "size": "small",
     "team": "orders",
-    "requestId": "82861851",
-    "environment": "dev",
-    "diskGb": 2
+    "requestId": "a51f3d33",
+    "environment": "staging",
+    "diskGb": 8
   }
 }
