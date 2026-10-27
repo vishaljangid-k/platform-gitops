@@ -1,0 +1,22 @@
+{
+  "apiVersion": "demo.acme.io/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-shop-dev",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage"
+    }
+  },
+  "spec": {
+    "size": "medium",
+    "team": "payments",
+    "requestId": "758a74ff",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
