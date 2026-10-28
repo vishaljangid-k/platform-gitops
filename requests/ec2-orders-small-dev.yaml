@@ -1,0 +1,22 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "orders-small-dev",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "team": "orders",
+    "requestId": "6a5d4967",
+    "environment": "dev",
+    "requestedBy": "user:default/dave",
+    "requesterTeams": [
+      "orders"
+    ],
+    "requesterIsAdmin": false
+  }
+}
