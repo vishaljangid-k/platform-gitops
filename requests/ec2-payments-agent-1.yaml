@@ -12,6 +12,7 @@
   "spec": {
     "team": "payments",
     "size": "small",
-    "requestId": "b189e2c5"
+    "diskGb": 10,
+    "requestId": "2c3857f1"
   }
 }
