@@ -1,0 +1,112 @@
+apiVersion: platform.kratix.io/v1alpha1
+kind: Promise
+metadata:
+  name: ec2
+spec:
+  api:
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: ec2instances.platform.kisracorp.com
+    spec:
+      group: platform.kisracorp.com
+      scope: Namespaced
+      names:
+        kind: EC2Instance
+        plural: ec2instances
+        singular: ec2instance
+      versions:
+        - name: v1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                spec:
+                  type: object
+                  required: [size, team]
+                  properties:
+                    size:
+                      type: string
+                      enum: [small, medium]
+                    team:
+                      type: string
+                    approvedBy:
+                      type: string
+                    requestId:
+                      type: string
+                    environment:
+                      type: string
+                      enum: [dev, staging, prod]
+                    diskGb:
+                      type: integer
+                      minimum: 8
+                      maximum: 200
+                    requestedBy:
+                      type: string
+                    requesterTeams:
+                      type: array
+                      items:
+                        type: string
+                    requesterIsAdmin:
+                      type: boolean
+  workflows:
+    resource:
+      configure:
+        - apiVersion: platform.kratix.io/v1alpha1
+          kind: Pipeline
+          metadata:
+            name: create
+          spec:
+            containers:
+              - name: opa-check
+                image: mikefarah/yq:4
+                command: ["sh", "-c"]
+                args:
+                  - |
+                    set -eu
+                    IN=/kratix/input/object.yaml
+                    REQUEST=$(yq -o=json -I=0 '.' "$IN")
+                    RID=$(yq '.spec.requestId // ""' "$IN")
+                    RESPONSE=$(wget -qO- --header 'Content-Type: application/json' \
+                      --post-data "{\"input\": $REQUEST}" \
+                      http://opa.opa-system.svc:8181/v1/data/ec2/decision)
+                    RESULT=$(echo "$RESPONSE" | yq -p=json '.result.result')
+                    REASONS=$(echo "$RESPONSE" | yq -p=json '.result.reasons | join("; ")')
+                    echo "OPA said: $RESULT ${REASONS}"
+                    case "$RESULT" in
+                      allow)    MSG="Policy OK" ;;
+                      approval) MSG="WAITING FOR APPROVAL: $REASONS" ;;
+                      *)        RESULT=deny; MSG="DENIED: $REASONS" ;;
+                    esac
+                    cat > /kratix/metadata/status.yaml <<EOF
+                    decision: "$RESULT"
+                    message: "$MSG"
+                    requestId: "$RID"
+                    EOF
+              - name: tofu-ec2
+                image: tofu-pipeline:dev
+                command: ["/scripts/ec2-apply.sh"]
+                envFrom:
+                  - secretRef:
+                      name: aws-creds
+                resources:
+                  requests: { cpu: 100m, memory: 256Mi, ephemeral-storage: 256Mi }
+                  limits: { cpu: "1", memory: 1Gi, ephemeral-storage: 2Gi }
+      delete:
+        - apiVersion: platform.kratix.io/v1alpha1
+          kind: Pipeline
+          metadata:
+            name: delete
+          spec:
+            containers:
+              - name: tofu-destroy
+                image: tofu-pipeline:dev
+                command: ["/scripts/ec2-destroy.sh"]
+                envFrom:
+                  - secretRef:
+                      name: aws-creds
+                resources:
+                  requests: { cpu: 100m, memory: 256Mi, ephemeral-storage: 256Mi }
+                  limits: { cpu: "1", memory: 1Gi, ephemeral-storage: 2Gi }
