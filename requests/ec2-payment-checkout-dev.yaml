@@ -1,0 +1,22 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payment-checkout-dev",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "team": "platform",
+    "requestId": "3234e6bc",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
