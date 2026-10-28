@@ -9,15 +9,16 @@
     }
   },
   "spec": {
-    "size": "medium",
-    "team": "platform",
-    "requestId": "d67c5b49",
-    "environment": "dev",
     "diskGb": 8,
+    "environment": "dev",
+    "requestId": "a557b338",
     "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "requesterIsAdmin": true
+    "size": "medium",
+    "team": "platform",
+    "approvedBy": "carol"
   }
 }
