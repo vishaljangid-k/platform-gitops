@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-test",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage"
+    }
+  },
+  "spec": {
+    "size": "medium",
+    "team": "platform",
+    "requestId": "d67c5b49",
+    "environment": "dev",
+    "diskGb": 8,
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
