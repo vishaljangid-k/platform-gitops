@@ -1,5 +1,5 @@
 {
-  "apiVersion": "demo.acme.io/v1",
+  "apiVersion": "platform.kisracorp.com/v1",
   "kind": "EC2Instance",
   "metadata": {
     "name": "payments-shop-dev",
