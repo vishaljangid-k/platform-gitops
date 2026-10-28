@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-dem-ec2-v2",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-dem-ec2-v2"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "team": "platform",
+    "requestId": "e21d49f5",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
