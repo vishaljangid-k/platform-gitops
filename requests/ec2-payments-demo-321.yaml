@@ -1,0 +1,18 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-demo-321",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "payments-demo-321"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "size": "small",
+    "diskGb": 12,
+    "requestId": "64029144"
+  }
+}
