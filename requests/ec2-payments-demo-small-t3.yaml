@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-demo-small-t3",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-demo-small-t3"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "2"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "team": "payments",
+    "requestId": "ea49b036",
+    "environment": "dev",
+    "diskGb": 8,
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
