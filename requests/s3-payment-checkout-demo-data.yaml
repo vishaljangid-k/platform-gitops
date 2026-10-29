@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "payment-checkout-demo-data",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payment-checkout-demo-data"
+    }
+  },
+  "spec": {
+    "public": false,
+    "team": "payments",
+    "requestId": "05eb6054",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
