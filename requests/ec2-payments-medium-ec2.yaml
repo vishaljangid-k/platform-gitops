@@ -10,15 +10,16 @@
     }
   },
   "spec": {
-    "size": "medium",
-    "team": "payments",
-    "requestId": "d790fb42",
-    "environment": "dev",
     "diskGb": 8,
+    "environment": "dev",
+    "requestId": "d064f748",
     "requestedBy": "user:default/alice",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "requesterIsAdmin": false
+    "size": "medium",
+    "team": "payments",
+    "approvedBy": "carol"
   }
 }
