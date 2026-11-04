@@ -1,0 +1,24 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "orders-t3-test",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "orders-t3-test"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "team": "orders",
+    "requestId": "5e973142",
+    "environment": "dev",
+    "diskGb": 8,
+    "requestedBy": "user:default/dave",
+    "requesterTeams": [
+      "orders"
+    ],
+    "requesterIsAdmin": false
+  }
+}
