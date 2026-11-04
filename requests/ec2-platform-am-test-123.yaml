@@ -12,10 +12,10 @@
   "spec": {
     "size": "medium",
     "team": "platform",
-    "requestId": "d9217e26",
+    "requestId": "3f8dde5a",
     "approvedBy": "carol",
-    "environment": "prod",
-    "diskGb": 3,
+    "environment": "staging",
+    "diskGb": 8,
     "requestedBy": "user:default/carol",
     "requesterTeams": [
       "platform"
