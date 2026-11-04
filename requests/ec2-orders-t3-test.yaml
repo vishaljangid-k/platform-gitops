@@ -7,14 +7,17 @@
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "orders-t3-test"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "10"
     }
   },
   "spec": {
     "size": "small",
     "team": "orders",
-    "requestId": "5e973142",
-    "environment": "dev",
-    "diskGb": 8,
+    "requestId": "2e17a5a8",
+    "environment": "staging",
+    "diskGb": 11,
     "requestedBy": "user:default/dave",
     "requesterTeams": [
       "orders"
