@@ -1,0 +1,24 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-am-test-123",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-am-test-123"
+    }
+  },
+  "spec": {
+    "size": "medium",
+    "team": "platform",
+    "requestId": "127ae09a",
+    "approvedBy": "carol",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
