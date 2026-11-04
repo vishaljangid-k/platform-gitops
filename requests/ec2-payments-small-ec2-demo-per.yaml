@@ -7,21 +7,19 @@
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-small-ec2-demo-per"
-    },
-    "annotations": {
-      "platform.kisracorp.com/ttl-minutes": "10"
     }
   },
   "spec": {
-    "size": "medium",
-    "team": "payments",
-    "requestId": "0c3a384a",
-    "environment": "dev",
     "diskGb": 8,
+    "environment": "dev",
+    "requestId": "c5ae17e7",
     "requestedBy": "user:default/alice",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "requesterIsAdmin": false
+    "size": "medium",
+    "team": "payments",
+    "approvedBy": "carol"
   }
 }
