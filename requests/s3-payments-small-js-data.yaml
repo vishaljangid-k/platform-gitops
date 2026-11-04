@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "payments-small-js-data",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-small-js-data"
+    }
+  },
+  "spec": {
+    "public": false,
+    "team": "payments",
+    "requestId": "473232c2",
+    "environment": "dev",
+    "requestedBy": "user:default/bob",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
