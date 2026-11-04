@@ -11,8 +11,9 @@
   },
   "spec": {
     "team": "orders",
-    "size": "small",
+    "size": "medium",
     "environment": "dev",
-    "requestId": "a7104284"
+    "approvedBy": "bob",
+    "requestId": "6f877ca0"
   }
 }
