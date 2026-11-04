@@ -5,15 +5,23 @@
     "name": "orders-small-micro-t2",
     "namespace": "default",
     "labels": {
-      "requested-from": "mcp",
+      "requested-from": "backstage",
       "backstage.io/kubernetes-id": "orders-small-micro-t2"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "5"
     }
   },
   "spec": {
-    "team": "orders",
     "size": "medium",
+    "team": "orders",
+    "requestId": "505e15e2",
     "environment": "dev",
-    "approvedBy": "bob",
-    "requestId": "6f877ca0"
+    "diskGb": 8,
+    "requestedBy": "user:default/dave",
+    "requesterTeams": [
+      "orders"
+    ],
+    "requesterIsAdmin": false
   }
 }
