@@ -7,15 +7,12 @@
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-small-t3"
-    },
-    "annotations": {
-      "platform.kisracorp.com/ttl-minutes": "20"
     }
   },
   "spec": {
-    "size": "small",
+    "size": "medium",
     "team": "payments",
-    "requestId": "ef0621c5",
+    "requestId": "bcec416b",
     "approvedBy": "bob",
     "environment": "dev",
     "diskGb": 8,
