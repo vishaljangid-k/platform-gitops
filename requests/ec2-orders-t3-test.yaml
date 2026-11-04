@@ -10,10 +10,10 @@
     }
   },
   "spec": {
-    "approvedBy": "bob",
+    "approvedBy": "carol",
     "diskGb": 8,
     "environment": "dev",
-    "requestId": "649fdbda",
+    "requestId": "9cd0c3c4",
     "requestedBy": "user:default/dave",
     "requesterIsAdmin": false,
     "requesterTeams": [
