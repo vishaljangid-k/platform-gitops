@@ -1,0 +1,17 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-agent-1",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "platform-agent-1"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "size": "small",
+    "requestId": "44df05d2"
+  }
+}
