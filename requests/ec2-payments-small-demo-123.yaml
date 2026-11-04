@@ -7,13 +7,17 @@
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-small-demo-123"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "5"
     }
   },
   "spec": {
     "size": "small",
     "team": "payments",
-    "requestId": "c6adb52a",
+    "requestId": "be286440",
     "environment": "dev",
+    "diskGb": 8,
     "requestedBy": "user:default/alice",
     "requesterTeams": [
       "payments"
