@@ -10,14 +10,15 @@
     }
   },
   "spec": {
-    "size": "medium",
-    "team": "payments",
-    "requestId": "c909e13f",
     "environment": "dev",
+    "requestId": "48be4594",
     "requestedBy": "user:default/alice",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "requesterIsAdmin": false
+    "size": "medium",
+    "team": "payments",
+    "approvedBy": "carol"
   }
 }
