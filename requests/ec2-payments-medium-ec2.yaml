@@ -7,19 +7,21 @@
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-medium-ec2"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "10"
     }
   },
   "spec": {
+    "size": "medium",
+    "team": "payments",
+    "requestId": "3537cfe2",
+    "environment": "staging",
     "diskGb": 8,
-    "environment": "dev",
-    "requestId": "d064f748",
     "requestedBy": "user:default/alice",
-    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "size": "medium",
-    "team": "payments",
-    "approvedBy": "carol"
+    "requesterIsAdmin": false
   }
 }
