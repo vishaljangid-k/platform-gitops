@@ -1,0 +1,24 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-medium-ec2",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-medium-ec2"
+    }
+  },
+  "spec": {
+    "size": "medium",
+    "team": "payments",
+    "requestId": "d790fb42",
+    "environment": "dev",
+    "diskGb": 8,
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
