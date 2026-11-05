@@ -4,35 +4,35 @@
   "metadata": {
     "name": "platform-testing-123",
     "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/ttl-minutes": "960"
+    },
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "platform-testing-123"
-    },
-    "annotations": {
-      "platform.kisracorp.com/ttl-minutes": "480",
-      "platform.kisracorp.com/owner": "user:default/carol"
     }
   },
   "spec": {
-    "size": "small",
-    "environment": "dev",
-    "diskGb": 8,
-    "loadBalancer": "alb",
-    "lbScheme": "internet-facing",
-    "exposedPort": 80,
-    "healthCheckPath": "/",
+    "approvedBy": "carol",
     "assignPublicIp": true,
     "costCenter": "CC-1234",
-    "scaling": "asg",
-    "minInstances": 1,
+    "diskGb": 8,
+    "environment": "dev",
+    "exposedPort": 80,
+    "healthCheckPath": "/",
+    "lbScheme": "internet-facing",
+    "loadBalancer": "alb",
     "maxInstances": 2,
-    "team": "platform",
+    "minInstances": 1,
     "requestId": "922d71ff",
-    "approvedBy": "carol",
     "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "requesterIsAdmin": true
+    "scaling": "asg",
+    "size": "small",
+    "team": "platform"
   }
 }
