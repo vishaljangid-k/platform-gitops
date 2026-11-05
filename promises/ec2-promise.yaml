@@ -43,6 +43,36 @@ spec:
                       type: integer
                       minimum: 8
                       maximum: 200
+                    assignPublicIp:
+                      type: boolean
+                    loadBalancer:
+                      type: string
+                      enum: [none, alb, nlb]
+                    lbScheme:
+                      type: string
+                      enum: [internet-facing, internal]
+                    exposedPort:
+                      type: integer
+                      minimum: 1
+                      maximum: 65535
+                    healthCheckPath:
+                      type: string
+                    costCenter:
+                      type: string
+                    scaling:
+                      type: string
+                      enum: [single, asg]
+                    minInstances:
+                      type: integer
+                      minimum: 1
+                      maximum: 20
+                    maxInstances:
+                      type: integer
+                      minimum: 1
+                      maximum: 20
+                    powerState:
+                      type: string
+                      enum: [running, stopped]
                     requestedBy:
                       type: string
                     requesterTeams:
