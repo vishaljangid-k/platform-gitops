@@ -1,0 +1,35 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-tester-123123",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-tester-123123"
+    },
+    "annotations": {
+      "platform.kisracorp.com/owner": "user:default/carol"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "environment": "dev",
+    "diskGb": 20,
+    "loadBalancer": "nlb",
+    "lbScheme": "internal",
+    "exposedPort": 8080,
+    "healthCheckPath": "/",
+    "assignPublicIp": false,
+    "costCenter": "CC-1234",
+    "scaling": "single",
+    "team": "platform",
+    "requestId": "7aed3449",
+    "approvedBy": "carol",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
