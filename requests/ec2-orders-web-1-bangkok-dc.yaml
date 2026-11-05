@@ -1,0 +1,30 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "orders-web-1-bangkok-dc",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "orders-web-1-bangkok-dc"
+    },
+    "annotations": {
+      "platform.kisracorp.com/owner": "user:default/dave",
+      "platform.kisracorp.com/location": "bangkok-dc",
+      "platform.kisracorp.com/copy-of": "orders-web-1"
+    }
+  },
+  "spec": {
+    "costCenter": "CC-3001",
+    "diskGb": 8,
+    "environment": "dev",
+    "size": "medium",
+    "team": "orders",
+    "requestId": "85fbed3d",
+    "requestedBy": "user:default/dave",
+    "requesterTeams": [
+      "orders"
+    ],
+    "requesterIsAdmin": false
+  }
+}
