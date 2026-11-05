@@ -4,27 +4,28 @@
   "metadata": {
     "name": "orders-web-1-bangkok-dc",
     "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/copy-of": "orders-web-1",
+      "platform.kisracorp.com/location": "bangkok-dc",
+      "platform.kisracorp.com/owner": "user:default/dave"
+    },
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "orders-web-1-bangkok-dc"
-    },
-    "annotations": {
-      "platform.kisracorp.com/owner": "user:default/dave",
-      "platform.kisracorp.com/location": "bangkok-dc",
-      "platform.kisracorp.com/copy-of": "orders-web-1"
     }
   },
   "spec": {
     "costCenter": "CC-3001",
     "diskGb": 8,
     "environment": "dev",
-    "size": "medium",
-    "team": "orders",
-    "requestId": "85fbed3d",
+    "requestId": "072a4118",
     "requestedBy": "user:default/dave",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "orders"
     ],
-    "requesterIsAdmin": false
+    "size": "medium",
+    "team": "orders",
+    "approvedBy": "carol"
   }
 }
