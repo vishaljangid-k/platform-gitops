@@ -4,34 +4,35 @@
   "metadata": {
     "name": "payments-small-bucket",
     "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/location": "bangkok-dc",
+      "platform.kisracorp.com/off-hours": "20-8",
+      "platform.kisracorp.com/owner": "user:default/alice",
+      "platform.kisracorp.com/ttl-minutes": "480"
+    },
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-small-bucket"
-    },
-    "annotations": {
-      "platform.kisracorp.com/ttl-minutes": "480",
-      "platform.kisracorp.com/owner": "user:default/alice",
-      "platform.kisracorp.com/off-hours": "20-8",
-      "platform.kisracorp.com/location": "bangkok-dc"
     }
   },
   "spec": {
-    "size": "small",
-    "environment": "dev",
-    "diskGb": 8,
-    "loadBalancer": "alb",
-    "lbScheme": "internet-facing",
-    "exposedPort": 80,
-    "healthCheckPath": "/",
     "assignPublicIp": false,
     "costCenter": "CC-1234",
-    "scaling": "single",
-    "team": "payments",
-    "requestId": "c631ff30",
+    "diskGb": 8,
+    "environment": "dev",
+    "exposedPort": 80,
+    "healthCheckPath": "/",
+    "lbScheme": "internet-facing",
+    "loadBalancer": "alb",
+    "requestId": "a098c33d",
     "requestedBy": "user:default/alice",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "requesterIsAdmin": false
+    "scaling": "single",
+    "size": "small",
+    "team": "payments",
+    "approvedBy": "carol"
   }
 }
