@@ -1,0 +1,38 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-small-sys",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-small-sys"
+    },
+    "annotations": {
+      "platform.kisracorp.com/ttl-minutes": "480",
+      "platform.kisracorp.com/owner": "user:default/alice",
+      "platform.kisracorp.com/location": "bangkok-dc"
+    }
+  },
+  "spec": {
+    "size": "small",
+    "environment": "dev",
+    "diskGb": 8,
+    "loadBalancer": "alb",
+    "lbScheme": "internet-facing",
+    "exposedPort": 80,
+    "healthCheckPath": "/",
+    "assignPublicIp": false,
+    "costCenter": "CC-1234",
+    "scaling": "asg",
+    "minInstances": 1,
+    "maxInstances": 2,
+    "team": "payments",
+    "requestId": "d241526a",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
