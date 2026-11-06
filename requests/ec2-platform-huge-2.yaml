@@ -1,0 +1,26 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-huge-2",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/owner": "agent:mcp"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "platform-huge-2"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "size": "small",
+    "costCenter": "CC-1234",
+    "loadBalancer": "alb",
+    "lbScheme": "internal",
+    "scaling": "asg",
+    "minInstances": 1,
+    "maxInstances": 3,
+    "requestId": "ee5a78a3"
+  }
+}
