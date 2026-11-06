@@ -1,0 +1,33 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-shop-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-shop",
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/88a57235-86af-4835-a7a8-7e094db0d7bf",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-shop/aad2629c-b81c-4e42-b530-12802c485435"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-shop-web"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true,
+    "costCenter": "CC-1234",
+    "approvedBy": "carol",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internal",
+    "requestId": "af6abd1e"
+  }
+}
