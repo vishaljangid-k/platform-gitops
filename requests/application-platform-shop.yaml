@@ -1,0 +1,43 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "platform-shop",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-shop"
+    }
+  },
+  "spec": {
+    "compute": {
+      "size": "small",
+      "exposure": "internal"
+    },
+    "https": true,
+    "waf": true,
+    "cache": {
+      "size": "small"
+    },
+    "monitoring": {
+      "retentionDays": 30
+    },
+    "backup": {
+      "retentionDays": 14
+    },
+    "database": {
+      "size": "small",
+      "engine": "postgres"
+    },
+    "team": "platform",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "5f81a37a",
+    "approvedBy": "carol",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true
+  }
+}
