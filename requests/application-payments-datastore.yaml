@@ -1,0 +1,31 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "payments-datastore",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-datastore"
+    }
+  },
+  "spec": {
+    "table": true,
+    "storage": true,
+    "monitoring": {
+      "retentionDays": 30
+    },
+    "backup": {
+      "retentionDays": 14
+    },
+    "team": "payments",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "274f83b4",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
