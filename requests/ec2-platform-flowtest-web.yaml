@@ -1,0 +1,33 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-flowtest-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-flowtest",
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/a34c2149-83e2-4ccc-87b7-37f1f37e9447",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-flowtest/2bb50f17-6bb1-4ab8-adb4-823f93686ff4"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-flowtest-web"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true,
+    "costCenter": "CC-1234",
+    "approvedBy": "carol",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internet-facing",
+    "requestId": "3436cfdd"
+  }
+}
