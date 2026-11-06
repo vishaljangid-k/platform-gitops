@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "platform-apptest-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-apptest"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-apptest-data"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "staging",
+    "costCenter": "CC-1234",
+    "approvedBy": "bob",
+    "public": false,
+    "requestId": "6088da9f"
+  }
+}
