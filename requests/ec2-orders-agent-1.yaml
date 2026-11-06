@@ -1,0 +1,22 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "orders-agent-1",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/location": "bangkok-dc",
+      "platform.kisracorp.com/owner": "agent:mcp"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "orders-agent-1"
+    }
+  },
+  "spec": {
+    "team": "orders",
+    "size": "small",
+    "costCenter": "CC-1234",
+    "requestId": "bd598114"
+  }
+}
