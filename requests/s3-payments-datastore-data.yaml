@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "payments-datastore-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-datastore",
+      "platform.kisracorp.com/owner": "user:default/alice"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-datastore-data"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false,
+    "public": false,
+    "requestId": "c677e6e8"
+  }
+}
