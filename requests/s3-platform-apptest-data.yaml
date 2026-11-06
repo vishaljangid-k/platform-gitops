@@ -15,9 +15,7 @@
   "spec": {
     "team": "platform",
     "environment": "staging",
-    "costCenter": "CC-1234",
-    "approvedBy": "bob",
     "public": false,
-    "requestId": "e028188a"
+    "requestId": "5b7c6a08"
   }
 }
