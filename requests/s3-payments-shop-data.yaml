@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "payments-shop-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-shop",
+      "platform.kisracorp.com/owner": "user:default/alice"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-shop-data"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false,
+    "public": false,
+    "requestId": "d5c845fc"
+  }
+}
