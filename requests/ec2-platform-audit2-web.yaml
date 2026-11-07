@@ -1,0 +1,25 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-audit2-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-audit2",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/668d6812-55da-4d47-a3db-24a767be4229"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-audit2-web"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internal",
+    "requestId": "6237fe4b"
+  }
+}
