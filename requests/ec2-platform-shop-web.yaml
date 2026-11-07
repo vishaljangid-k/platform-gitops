@@ -7,8 +7,8 @@
     "annotations": {
       "platform.kisracorp.com/application": "platform-shop",
       "platform.kisracorp.com/owner": "user:default/carol",
-      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/88a57235-86af-4835-a7a8-7e094db0d7bf",
-      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-shop/aad2629c-b81c-4e42-b530-12802c485435"
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/dfca2f10-2b2c-40f9-b910-1c6486daf8e8",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-shop/bec310f0-2401-46b8-a0de-1e11cd736161"
     },
     "labels": {
       "requested-from": "backstage",
@@ -16,18 +16,18 @@
     }
   },
   "spec": {
-    "team": "platform",
+    "approvedBy": "carol",
+    "costCenter": "CC-1234",
     "environment": "dev",
+    "lbScheme": "internal",
+    "loadBalancer": "alb",
+    "requestId": "177fdff9",
     "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "requesterIsAdmin": true,
-    "costCenter": "CC-1234",
-    "approvedBy": "carol",
     "size": "small",
-    "loadBalancer": "alb",
-    "lbScheme": "internal",
-    "requestId": "af6abd1e"
+    "team": "platform"
   }
 }
