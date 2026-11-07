@@ -4,26 +4,27 @@
   "metadata": {
     "name": "platform-stoptest-web",
     "namespace": "default",
-    "annotations": {
-      "platform.kisracorp.com/application": "platform-stoptest",
-      "platform.kisracorp.com/owner": "user:default/carol"
-    },
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "platform-stoptest-web"
+    },
+    "annotations": {
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/application": "platform-stoptest"
     }
   },
   "spec": {
-    "team": "platform",
+    "costCenter": "CC-1234",
     "environment": "dev",
+    "loadBalancer": "none",
+    "size": "small",
+    "team": "platform",
+    "powerState": "stopped",
+    "requestId": "f53b84b8",
     "requestedBy": "user:default/carol",
     "requesterTeams": [
       "platform"
     ],
-    "requesterIsAdmin": true,
-    "costCenter": "CC-1234",
-    "size": "small",
-    "loadBalancer": "none",
-    "requestId": "d9a53b94"
+    "requesterIsAdmin": true
   }
 }
