@@ -1,0 +1,45 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "platform-day2",
+    "namespace": "default",
+    "annotations": {},
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-day2"
+    }
+  },
+  "spec": {
+    "backup": {
+      "retentionDays": 35
+    },
+    "cache": {
+      "size": "small"
+    },
+    "compute": {
+      "exposure": "internal",
+      "size": "small"
+    },
+    "costCenter": "CC-1234",
+    "database": {
+      "engine": "postgres",
+      "size": "medium"
+    },
+    "environment": "dev",
+    "monitoring": {
+      "retentionDays": 90
+    },
+    "requestId": "dc0a3bd6",
+    "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
+    "requesterTeams": [
+      "platform"
+    ],
+    "team": "platform",
+    "table": true,
+    "storage": true,
+    "https": true,
+    "waf": true
+  }
+}
