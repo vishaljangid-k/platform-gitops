@@ -6,7 +6,9 @@
     "namespace": "default",
     "annotations": {
       "platform.kisracorp.com/application": "platform-day2",
-      "platform.kisracorp.com/owner": "user:default/carol"
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/5feabcb1-9823-46c2-a021-8799c6746575",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-day2/8c61bce8-e6e7-4932-9f22-02838c13ebd7"
     },
     "labels": {
       "requested-from": "backstage",
@@ -14,17 +16,17 @@
     }
   },
   "spec": {
-    "team": "platform",
+    "costCenter": "CC-1234",
     "environment": "dev",
+    "lbScheme": "internal",
+    "loadBalancer": "alb",
+    "requestId": "edac9eec",
     "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "requesterIsAdmin": true,
-    "costCenter": "CC-1234",
     "size": "small",
-    "loadBalancer": "alb",
-    "lbScheme": "internal",
-    "requestId": "d053c08d"
+    "team": "platform"
   }
 }
