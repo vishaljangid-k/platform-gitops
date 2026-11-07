@@ -4,15 +4,15 @@
   "metadata": {
     "name": "platform-day2-web",
     "namespace": "default",
-    "annotations": {
-      "platform.kisracorp.com/application": "platform-day2",
-      "platform.kisracorp.com/owner": "user:default/carol",
-      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/5feabcb1-9823-46c2-a021-8799c6746575",
-      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-day2/8c61bce8-e6e7-4932-9f22-02838c13ebd7"
-    },
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "platform-day2-web"
+    },
+    "annotations": {
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/application": "platform-day2",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/5feabcb1-9823-46c2-a021-8799c6746575",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-day2/8c61bce8-e6e7-4932-9f22-02838c13ebd7"
     }
   },
   "spec": {
@@ -20,13 +20,14 @@
     "environment": "dev",
     "lbScheme": "internal",
     "loadBalancer": "alb",
-    "requestId": "edac9eec",
+    "size": "small",
+    "team": "platform",
+    "powerState": "stopped",
+    "requestId": "2ee42e8c",
     "requestedBy": "user:default/carol",
-    "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "size": "small",
-    "team": "platform"
+    "requesterIsAdmin": true
   }
 }
