@@ -1,0 +1,46 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "platform-audit",
+    "namespace": "default",
+    "annotations": {},
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-audit"
+    }
+  },
+  "spec": {
+    "backup": {
+      "retentionDays": 14
+    },
+    "cache": {
+      "size": "small"
+    },
+    "compute": {
+      "exposure": "internet-facing",
+      "size": "small"
+    },
+    "costCenter": "CC-1234",
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "environment": "prod",
+    "https": true,
+    "monitoring": {
+      "retentionDays": 30
+    },
+    "requestId": "84fec598",
+    "requestedBy": "user:default/carol",
+    "requesterIsAdmin": true,
+    "requesterTeams": [
+      "platform"
+    ],
+    "storage": true,
+    "table": true,
+    "team": "platform",
+    "waf": true,
+    "approvedBy": "bob"
+  }
+}
