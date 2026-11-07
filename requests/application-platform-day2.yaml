@@ -27,19 +27,20 @@
       "size": "medium"
     },
     "environment": "dev",
+    "https": true,
     "monitoring": {
       "retentionDays": 90
     },
-    "requestId": "f4188fe2",
+    "requestId": "7d04ce5b",
     "requestedBy": "user:default/carol",
     "requesterIsAdmin": true,
     "requesterTeams": [
       "platform"
     ],
-    "team": "platform",
-    "table": true,
     "storage": true,
-    "https": true,
-    "waf": true
+    "table": true,
+    "team": "platform",
+    "waf": true,
+    "approvedBy": "bob"
   }
 }
