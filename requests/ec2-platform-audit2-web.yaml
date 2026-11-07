@@ -19,10 +19,10 @@
     "environment": "dev",
     "lbScheme": "internal",
     "loadBalancer": "alb",
+    "powerState": "running",
     "size": "small",
     "team": "platform",
-    "powerState": "stopped",
-    "requestId": "226d9f2e",
+    "requestId": "b60249b8",
     "requestedBy": "user:default/carol",
     "requesterTeams": [
       "platform"
