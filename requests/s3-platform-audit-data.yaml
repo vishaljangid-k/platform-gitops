@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "platform-audit-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-audit",
+      "platform.kisracorp.com/owner": "user:default/carol"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-audit-data"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "prod",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true,
+    "public": false,
+    "requestId": "749fe535"
+  }
+}
