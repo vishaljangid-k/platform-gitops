@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "platform-checkout-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-checkout",
+      "platform.kisracorp.com/owner": "user:default/carol"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-checkout-data"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true,
+    "public": false,
+    "requestId": "693325f2"
+  }
+}
