@@ -1,0 +1,23 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "platform-mcptest",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/owner": "agent:mcp"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "platform-mcptest"
+    }
+  },
+  "spec": {
+    "table": true,
+    "storage": true,
+    "team": "platform",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "43e22377"
+  }
+}
