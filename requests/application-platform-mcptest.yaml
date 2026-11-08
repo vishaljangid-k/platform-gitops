@@ -13,11 +13,17 @@
     }
   },
   "spec": {
-    "table": true,
-    "storage": true,
-    "team": "platform",
-    "environment": "dev",
     "costCenter": "CC-1234",
-    "requestId": "43e22377"
+    "environment": "dev",
+    "storage": true,
+    "table": true,
+    "team": "platform",
+    "monitoring": {
+      "retentionDays": 7
+    },
+    "backup": {
+      "retentionDays": 7
+    },
+    "requestId": "4c5aef4d"
   }
 }
