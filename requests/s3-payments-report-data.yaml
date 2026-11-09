@@ -1,0 +1,21 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "S3Bucket",
+  "metadata": {
+    "name": "payments-report-data",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-report"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "payments-report-data"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "public": false,
+    "requestId": "b1fdfced"
+  }
+}
