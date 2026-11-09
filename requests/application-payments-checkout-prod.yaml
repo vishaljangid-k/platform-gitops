@@ -4,39 +4,41 @@
   "metadata": {
     "name": "payments-checkout-prod",
     "namespace": "default",
+    "annotations": {},
     "labels": {
       "requested-from": "backstage",
       "backstage.io/kubernetes-id": "payments-checkout-prod"
     }
   },
   "spec": {
-    "compute": {
-      "size": "small",
-      "exposure": "internet-facing"
-    },
-    "https": true,
-    "waf": true,
-    "database": {
-      "engine": "postgres",
-      "size": "small"
+    "backup": {
+      "retentionDays": 14
     },
     "cache": {
       "size": "small"
     },
+    "compute": {
+      "exposure": "internet-facing",
+      "size": "small"
+    },
+    "costCenter": "CC-1234",
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "environment": "prod",
+    "https": true,
     "monitoring": {
       "retentionDays": 30
     },
-    "backup": {
-      "retentionDays": 14
-    },
-    "team": "payments",
-    "environment": "prod",
-    "costCenter": "CC-1234",
-    "requestId": "8af1ddf3",
+    "requestId": "d0156699",
     "requestedBy": "user:default/alice",
+    "requesterIsAdmin": false,
     "requesterTeams": [
       "payments"
     ],
-    "requesterIsAdmin": false
+    "team": "payments",
+    "waf": true,
+    "approvedBy": "carol"
   }
 }
