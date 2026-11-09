@@ -1,0 +1,43 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "payments-checkout",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-checkout"
+    }
+  },
+  "spec": {
+    "compute": {
+      "size": "small",
+      "exposure": "internal"
+    },
+    "https": true,
+    "waf": true,
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "cache": {
+      "size": "small"
+    },
+    "monitoring": {
+      "retentionDays": 7
+    },
+    "backup": {
+      "retentionDays": 7
+    },
+    "storage": true,
+    "team": "payments",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "1701abe0",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
