@@ -1,0 +1,32 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-checkout-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-checkout",
+      "platform.kisracorp.com/owner": "user:default/alice",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/13c5015c-379a-4611-8a8d-35d803f96597",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/payments-checkout/326b45bd-7212-433b-80ac-161d3970cb90"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-checkout-web"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false,
+    "costCenter": "CC-1234",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internal",
+    "requestId": "ad11e93f"
+  }
+}
