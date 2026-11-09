@@ -1,0 +1,40 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "payments-test",
+    "namespace": "default",
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-test"
+    }
+  },
+  "spec": {
+    "compute": {
+      "size": "small",
+      "exposure": "none"
+    },
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "cache": {
+      "size": "small"
+    },
+    "monitoring": {
+      "retentionDays": 30
+    },
+    "backup": {
+      "retentionDays": 14
+    },
+    "team": "payments",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "55d18e53",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false
+  }
+}
