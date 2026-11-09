@@ -1,0 +1,24 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-report-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-report"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "payments-report-web"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internal",
+    "requestId": "09720510"
+  }
+}
