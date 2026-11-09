@@ -1,0 +1,36 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "payments-report",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/owner": "agent:mcp"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "payments-report"
+    }
+  },
+  "spec": {
+    "compute": {
+      "size": "small",
+      "exposure": "internal"
+    },
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "cache": {
+      "size": "small"
+    },
+    "storage": true,
+    "monitoring": {
+      "retentionDays": 7
+    },
+    "team": "payments",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "71e53bc5"
+  }
+}
