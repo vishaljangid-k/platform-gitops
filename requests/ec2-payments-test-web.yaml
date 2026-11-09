@@ -1,0 +1,29 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "payments-test-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "payments-test",
+      "platform.kisracorp.com/owner": "user:default/alice"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "payments-test-web"
+    }
+  },
+  "spec": {
+    "team": "payments",
+    "environment": "dev",
+    "requestedBy": "user:default/alice",
+    "requesterTeams": [
+      "payments"
+    ],
+    "requesterIsAdmin": false,
+    "costCenter": "CC-1234",
+    "size": "small",
+    "loadBalancer": "none",
+    "requestId": "5ca1b3c8"
+  }
+}
