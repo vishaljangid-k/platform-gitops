@@ -1,0 +1,33 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "EC2Instance",
+  "metadata": {
+    "name": "platform-checkout-web",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/application": "platform-checkout",
+      "platform.kisracorp.com/owner": "user:default/carol",
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/9e7c2127-5370-48a7-a8ec-1265cabab799",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/platform-checkout/897e6338-a395-4c73-893c-dee1c947df24"
+    },
+    "labels": {
+      "requested-from": "backstage",
+      "backstage.io/kubernetes-id": "platform-checkout-web"
+    }
+  },
+  "spec": {
+    "team": "platform",
+    "environment": "dev",
+    "requestedBy": "user:default/carol",
+    "requesterTeams": [
+      "platform"
+    ],
+    "requesterIsAdmin": true,
+    "costCenter": "CC-1234",
+    "approvedBy": "carol",
+    "size": "small",
+    "loadBalancer": "alb",
+    "lbScheme": "internet-facing",
+    "requestId": "169e0eef"
+  }
+}
