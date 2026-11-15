@@ -7,8 +7,8 @@
     "annotations": {
       "platform.kisracorp.com/application": "payments-checkout-prod",
       "platform.kisracorp.com/owner": "user:default/alice",
-      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/bf2f9289-ff69-4677-9b1c-4f4f8b6c3629",
-      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/payments-checkout-prod/e1a99380-efd2-4957-97f1-0199c441e7e1"
+      "platform.kisracorp.com/certificate-arn": "arn:aws:acm:us-east-1:000000000000:certificate/8d2bedcd-6538-4e23-8a91-74da6eba12f5",
+      "platform.kisracorp.com/waf-acl-arn": "arn:aws:wafv2:us-east-1:000000000000:regional/webacl/payments-checkout-prod/173c5908-b4e8-46c7-8548-66ea8c2bac13"
     },
     "labels": {
       "requested-from": "backstage",
@@ -21,7 +21,7 @@
     "environment": "prod",
     "lbScheme": "internet-facing",
     "loadBalancer": "alb",
-    "requestId": "03790be3",
+    "requestId": "c226eca2",
     "requestedBy": "user:default/alice",
     "requesterIsAdmin": false,
     "requesterTeams": [
