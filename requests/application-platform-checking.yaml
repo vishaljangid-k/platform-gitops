@@ -1,0 +1,29 @@
+{
+  "apiVersion": "platform.kisracorp.com/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "platform-checking",
+    "namespace": "default",
+    "annotations": {
+      "platform.kisracorp.com/owner": "agent:mcp"
+    },
+    "labels": {
+      "requested-from": "mcp",
+      "backstage.io/kubernetes-id": "platform-checking"
+    }
+  },
+  "spec": {
+    "compute": {
+      "size": "small",
+      "exposure": "internal"
+    },
+    "database": {
+      "engine": "postgres",
+      "size": "small"
+    },
+    "team": "platform",
+    "environment": "dev",
+    "costCenter": "CC-1234",
+    "requestId": "48d86eff"
+  }
+}
